@@ -1,0 +1,64 @@
+## Cmd commands
+
+## git com's
+ -- git init  // initialises the entire git framework
+ -- git clone <link of git repo (Local Repo)> // to pull from the local repo to the workspace
+ -- git add --all // Moves all changes to the staging area
+ -- git add -A // Moves all the changes to the staging area
+ -- git add. // Moves the current directory and all its contents to the staging area 
+ -- git reset // Resets and undos and changes made to the staging area back to the working directory
+ --git status // Receives status regarding changes and untracked files and deleted files 
+ -- git add* // Moves all the visible changes except deletion of any file to the staging directory
+ --git add <name of file> // stages the specified file
+ -- git add*.<extension> // stages all the files with the specified extension 
+ -- git commit -m <any message to be described regarding the commit>
+ -- git reset HEAD~ // Reverts all the changes made from the local repo to the working directory
+ -- git rm <name of file> // removes the specified file and also stages that change 
+ -- git reset --hard // Reverts the file and the changes made to the staging area
+ --git rm -f <name of file> // Forces to make change and to be deleted 
+ -- git rm --cached <name of file> // removes the change made to the stage and not the file
+ -- git rm -r <NAME OF FOLDER> // Recursively deletes the folders and sub folders and contents within
+
+ -- git log // To view the commits
+ -- git log --oneline // Views the changes in oneline
+
+* To create branching
+ -- git branch // Displays the current branches
+ -- git branch <name of branch> // creates a new branch --> TAKES THE CURRENT STATE OF THE CURRENT BRANCH YOU ARE ON
+ -- git checkout <name of branch> // moves to that branch 
+ -- git merge <branch name> -m "Message to describe the merging" // To merge <branch name> to the current branch you are on
+
+
+* To Handle a merge conflict
+ --> Resolve a merging conflict manually by either removing a change in one branch and commit it and then merge it again and then it will be resolved
+
+*To move into various commits
+ --git checkout <commit log ID> // Moves into that current commit branch {Make sure all changes are staged and committed}
+
+*To compare changes
+ -- git diff <commit ID 1> <commit ID 2>
+
+* Pushing changes from Local To Remote Directory
+ -- git push origin <branch name> // Pushes the changes made in the specified branch of the local directory to the remote directory 
+
+* Fetching changes from remote to local directory // Brings the changes from the remote but does not save the changes to the working directory
+ -- git fetch
+ -- git merge // saves the changes to the local directory
+
+* Pull // Merge + Fetch
+ -- git pull // fetches and saves changes to the local directory
+
+* Restoring changed files or branches 
+ -- git restore <file name> // Restores the same file to its last committed version
+ -- git restore services //   Restores the entire directory to its last committed directory
+ -- git restore. // Restores the entire repo
+
+ --git restore --staged <folder name>// Restores the entire folder to its last committed version even after staging 
+ -- git restore --staged . // Restores the entire repo to its last committed version even after staging
+
+ -- git stash // To save changes temporarily while switching branches instad of committing
+ -- git stash pop // Brings back the saved stash changed to the current branch and removes them from the stash list
+ -- git stash apply // Brings back the saved stash change to the current branch without removing them from the stash list
+ -- git stash list // To view stash list
+ -- git stash apply / pop stash[index] // to pop from stash at that specific index 
+ --git stash drop // Removes a temporarily saved change fully without restroring
